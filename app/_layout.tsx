@@ -1,29 +1,34 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
-import { useFonts } from 'expo-font';
-import { Stack } from 'expo-router';
-import { StatusBar } from 'expo-status-bar';
-import 'react-native-reanimated';
+import ToastBar from "@/components/toastBar";
+import { AuthProvider } from "@/contexts/authContext";
+import { ThemeProvider, useToggle } from "@/contexts/themeContext";
+import { ToastProvider } from "@/hooks/useToast";
+import { Slot } from "expo-router";
+import { StatusBar } from "expo-status-bar";
+import { Provider as PaperProvider } from "react-native-paper";
 
-import { useColorScheme } from '@/hooks/useColorScheme';
-
-export default function RootLayout() {
-  const colorScheme = useColorScheme();
-  const [loaded] = useFonts({
-    SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
-  });
-
-  if (!loaded) {
-    // Async font loading only occurs in development.
-    return null;
-  }
+function LayoutWithTheme() {
+  const { theme } = useToggle();
 
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="+not-found" />
-      </Stack>
-      <StatusBar style="auto" />
-    </ThemeProvider>
+    <PaperProvider theme={theme}>
+      <StatusBar
+        style={theme.dark ? "light" : "dark"}
+        backgroundColor={theme.colors.surface}
+      />
+      <Slot />
+      <ToastBar />
+    </PaperProvider>
+  );
+}
+
+export default function RootLayout() {
+  return (
+    <ToastProvider>
+      <AuthProvider>
+        <ThemeProvider>
+          <LayoutWithTheme />
+        </ThemeProvider>
+      </AuthProvider>
+    </ToastProvider>
   );
 }

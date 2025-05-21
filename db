@@ -1,0 +1,56 @@
+template/
+├─ app/
+│  ├─ (tabs)/
+│  │  ├─ a/
+│  │  │  ├─ _layout.tsx
+│  │  │  └─ index.tsx
+│  │  ├─ b/
+│  │  │  ├─ _layout.tsx
+│  │  │  └─ index.tsx
+│  │  ├─ c/
+│  │  │  ├─ _layout.tsx
+│  │  │  └─ index.tsx
+│  │  ├─ d/
+│  │  │  ├─ _layout.tsx
+│  │  │  └─ index.tsx
+│  │  └─ _layout.tsx
+│  ├─ _layout.tsx
+│  ├─ goodbye.tsx
+│  ├─ index.tsx
+│  └─ welcome.tsx
+├─ assets/
+│  ├─ fonts/
+│  │  └─ SpaceMono-Regular.ttf
+│  └─ images/
+│     ├─ favicon.png
+│     ├─ icon.png
+│     └─ splash.png
+├─ components/
+│  ├─ a/
+│  │  └─ userCard.tsx
+│  ├─ b/
+│  │  └─ userCard.tsx
+│  ├─ c/
+│  │  └─ userCard.tsx
+│  ├─ d/
+│  │  └─ userCard.tsx
+│  ├─ bottomNav.tsx
+│  ├─ logoutFAB.tsx
+│  ├─ sectionHeader.tsx
+│  ├─ skeletonLoad.tsx
+│  ├─ toastBar.tsx
+│  └─ topFAB.tsx
+├─ constants/
+│  ├─ color.ts
+│  └─ theme.ts
+├─ contexts/
+│  ├─ api/
+│  │  └─ api.tsx
+│  ├─ authContext.tsx
+│  ├─ bottomContext.tsx
+│  ├─ themeContext.tsx
+│  └─ tokenContext.tsx
+├─ hooks/
+│  ├─ useBottomNav.tsx
+│  └─ useToast.tsx
+
