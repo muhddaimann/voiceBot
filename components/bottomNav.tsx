@@ -97,6 +97,7 @@ export default function AnimatedTabBar({
         justifyContent: "space-around",
         alignItems: "center",
         paddingTop: Platform.OS === "android" ? wp("4%") : wp("2%"),
+        paddingHorizontal: wp("4%"),
         paddingBottom: wp("8%"),
         zIndex: 100,
       }}

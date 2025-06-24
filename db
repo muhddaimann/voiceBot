@@ -1,56 +1,88 @@
-template/
-├─ app/
-│  ├─ (tabs)/
-│  │  ├─ a/
-│  │  │  ├─ _layout.tsx
-│  │  │  └─ index.tsx
-│  │  ├─ b/
-│  │  │  ├─ _layout.tsx
-│  │  │  └─ index.tsx
-│  │  ├─ c/
-│  │  │  ├─ _layout.tsx
-│  │  │  └─ index.tsx
-│  │  ├─ d/
-│  │  │  ├─ _layout.tsx
-│  │  │  └─ index.tsx
-│  │  └─ _layout.tsx
-│  ├─ _layout.tsx
-│  ├─ goodbye.tsx
-│  ├─ index.tsx
-│  └─ welcome.tsx
-├─ assets/
-│  ├─ fonts/
-│  │  └─ SpaceMono-Regular.ttf
-│  └─ images/
-│     ├─ favicon.png
-│     ├─ icon.png
-│     └─ splash.png
-├─ components/
-│  ├─ a/
-│  │  └─ userCard.tsx
-│  ├─ b/
-│  │  └─ userCard.tsx
-│  ├─ c/
-│  │  └─ userCard.tsx
-│  ├─ d/
-│  │  └─ userCard.tsx
-│  ├─ bottomNav.tsx
-│  ├─ logoutFAB.tsx
-│  ├─ sectionHeader.tsx
-│  ├─ skeletonLoad.tsx
-│  ├─ toastBar.tsx
-│  └─ topFAB.tsx
-├─ constants/
-│  ├─ color.ts
-│  └─ theme.ts
-├─ contexts/
-│  ├─ api/
-│  │  └─ api.tsx
-│  ├─ authContext.tsx
-│  ├─ bottomContext.tsx
-│  ├─ themeContext.tsx
-│  └─ tokenContext.tsx
-├─ hooks/
-│  ├─ useBottomNav.tsx
-│  └─ useToast.tsx
+Product Requirements Document
+├─ Overview
+│   ├─ Project Name
+│   │   └─ VoiceBot
+│   └─ What It Is
+│       └─ A mobile app that lets users speak to a smart assistant to get information or trigger tasks without using hands
+
+├─ Objectives
+│   ├─ Why We Are Building This
+│   │   └─ To make work easier by allowing users to use their voice instead of typing or clicking
+│   ├─ What Success Looks Like
+│   │   ├─ Voice commands work accurately most of the time
+│   │   ├─ Tasks get done quickly within ten seconds
+│   │   ├─ People keep using the app after the first month
+│   │   └─ The assistant completes over one hundred tasks per user each week
+│   └─ Why It Matters
+│       └─ Saves time helps users stay productive and makes our systems more accessible
+
+├─ User Persona
+│   ├─ Meet Alex Our Typical User
+│   │   ├─ Job
+│   │   │   └─ Operations staff who needs updates fast
+│   │   ├─ Wants
+│   │   │   └─ Quick system checks using voice
+│   │   └─ Struggles With
+│   │       └─ Too many logins and slow dashboards
+│   └─ Where They Use It
+│       └─ While walking around during travel or juggling multiple tasks
+
+├─ Ideas
+│   ├─ Features We Want
+│   │   ├─ Speak naturally like talking to a human
+│   │   ├─ Voice assistant talks back or shows a reply
+│   │   ├─ Can still work in noisy places by switching to text
+│   │   ├─ Sends alerts when important things happen
+│   │   └─ Keeps a history of everything the user asked
+│   ├─ Problems We Are Fixing
+│   │   ├─ Too many steps to get simple updates
+│   │   └─ Current tools do not work well on phones
+│   └─ Big Opportunities
+│       ├─ Be one of the first voice apps for work
+│       └─ Add language options or work even with no internet
+
+├─ Key Features
+│   ├─ Talk to the App
+│   │   ├─ Tap a button or say hey voice bot
+│   │   └─ See your voice turned into text on screen
+│   ├─ Understand Commands
+│   │   ├─ Figures out what the user wants
+│   │   └─ Can follow multiple steps if needed
+│   ├─ Do the Task
+│   │   ├─ Sends the task to our system in the background
+│   │   └─ Shows or says a confirmation reply
+│   ├─ View Past Activity
+│   │   ├─ List of things you have asked the assistant
+│   │   └─ Option to repeat or mark as favorite
+│   └─ Settings
+│       ├─ Choose language and alerts
+│       ├─ Login and security options
+│       └─ Connect to our system through api setup
+
+├─ App Structure
+│   ├─ Auth
+│   │   ├─ Login screen with username and password
+│   │   └─ Token storage with auto login and logout
+│
+│   ├─ Tabs
+│   │   ├─ Home
+│   │   │   ├─ Voice button to trigger assistant
+│   │   │   ├─ Assistant replies with text or audio
+│   │   │   └─ Quick actions based on frequent commands
+│   │
+│   │   ├─ History
+│   │   │   ├─ List of previous voice commands
+│   │   │   ├─ Details with timestamps and status
+│   │   │   └─ Mark as favorite or repeat a task
+│   │
+│   │   ├─ Tasks
+│   │   │   ├─ Show running or scheduled tasks
+│   │   │   ├─ Task completion logs
+│   │   │   └─ Manual trigger option for selected tasks
+│   │
+│   │   └─ Settings
+│   │       ├─ Change language and voice style
+│   │       ├─ Enable or mute alerts
+│   │       ├─ Authentication and user info
+│   │       └─ API and system connection setup
 
