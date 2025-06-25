@@ -38,7 +38,7 @@ export default function Login() {
         useNativeDriver: true,
       }),
     ]).start();
-  }, []);
+  }, [fadeAnim, translateY]);
 
   const handleLogin = async () => {
     if (!username.trim() || !password.trim()) {

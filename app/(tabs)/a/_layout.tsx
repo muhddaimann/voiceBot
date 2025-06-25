@@ -11,12 +11,18 @@ export default function LayoutA() {
         headerStyle: {
           backgroundColor: theme.colors.surface,
         },
-        headerTintColor: theme.colors.surface,
+        headerTintColor: theme.colors.onSurface,
         headerShadowVisible: false,
       }}
     >
       <Stack.Screen
         name="index"
+        options={{
+          title: "",
+        }}
+      />
+      <Stack.Screen
+        name="chatPage"
         options={{
           title: "",
         }}

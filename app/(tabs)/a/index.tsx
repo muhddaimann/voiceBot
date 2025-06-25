@@ -1,3 +1,4 @@
+import HomePage from "@/components/a/homePage";
 import UserCard from "@/components/a/userCard";
 import SkeletonLoad from "@/components/skeletonLoad";
 import TopFAB from "@/components/topFAB";
@@ -75,19 +76,7 @@ export default function Home() {
         >
           <UserCard />
           <View style={styles.body}>
-            {loading ? (
-              <SkeletonLoad />
-            ) : (
-              <View
-                style={[
-                  styles.card,
-                  {
-                    backgroundColor: theme.colors.surface,
-                    shadowColor: theme.colors.shadow,
-                  },
-                ]}
-              />
-            )}
+            {loading ? <SkeletonLoad /> : <HomePage />}
           </View>
         </View>
       </ScrollView>
@@ -108,14 +97,5 @@ const styles = StyleSheet.create({
   body: {
     width: "100%",
     paddingHorizontal: wp("4%"),
-    gap: wp("2%"),
-  },
-  card: {
-    height: wp("250%"),
-    borderRadius: wp("4%"),
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.1,
-    shadowRadius: 1,
-    elevation: 2,
   },
 });
